@@ -1,7 +1,7 @@
 ####{BSB GENERATED: NO EDIT
 B lib/bs
 FLG -open Ocaml
-FLG -ppx /Users/greg_murray/.config/yarn/global/node_modules/bs-platform/lib/bsppx.exe
+FLG -ppx /Users/greg_murray/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/bsppx.exe
 S /Users/greg_murray/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/ocaml
 B /Users/greg_murray/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/ocaml
 FLG -nostdlib -color always

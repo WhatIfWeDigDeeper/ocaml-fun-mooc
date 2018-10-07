@@ -27,3 +27,6 @@ Identify a pattern
 
 `=` is structural equality
 `==` physical equality, pointing to same location in memory
+
+## Records
+

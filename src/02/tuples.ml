@@ -17,14 +17,14 @@ let (x, _) = a;;
   For instance, exchange 73 = 37.
 *)
 let exchange k =
-    if (k < 10 || k > 99)
-      then k
-    else
-      let str = string_of_int k in
-      let c1 = String.get str 0 in
-      let c2 = String.get str 1 in
-      let reversed_string = (String.make 1 c2) ^ (String.make 1 c1) in
-      let result = int_of_string reversed_string in result;;
+  if (k < 10 || k > 99)
+  then k
+  else
+    let str = string_of_int k in
+    let c1 = String.get str 0 in
+    let c2 = String.get str 1 in
+    let reversed_string = (String.make 1 c2) ^ (String.make 1 c1) in
+    let result = int_of_string reversed_string in result;;
 
 (*
   If you multiply my grand-son age by four, you know how old I am.
@@ -56,15 +56,15 @@ or (-1, -1) if there was no valid answer in the given range.
 type grand_age = int * int;;
 let rec find (answer: grand_age): grand_age =
   if is_valid_answer answer
-    then answer
+  then answer
   else
     let max_grand_father_age, min_grand_son_age = answer in
     let grand_son_age = min_grand_son_age + 1 in
     let grand_father_age = max_grand_father_age -1 in
     let result =
       if (min_grand_son_age <= grand_son_age
-        && grand_son_age < grand_father_age
-        && grand_father_age <= max_grand_father_age)
+          && grand_son_age < grand_father_age
+          && grand_father_age <= max_grand_father_age)
       then
         find (grand_son_age, grand_father_age)
       else
@@ -73,14 +73,14 @@ let rec find (answer: grand_age): grand_age =
 
 let rec find (min_grand_son_age, max_grand_father_age): grand_age =
   if is_valid_answer (min_grand_son_age, max_grand_father_age)
-    then (min_grand_son_age, max_grand_father_age)
+  then (min_grand_son_age, max_grand_father_age)
   else
     let grand_son_age = min_grand_son_age + 1 in
     let grand_father_age = max_grand_father_age -1 in
     let result =
       if (min_grand_son_age <= grand_son_age
-        && grand_son_age < grand_father_age
-        && grand_father_age <= max_grand_father_age)
+          && grand_son_age < grand_father_age
+          && grand_father_age <= max_grand_father_age)
       then
         find (grand_son_age, grand_father_age)
       else
