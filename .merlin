@@ -1,11 +1,15 @@
 ####{BSB GENERATED: NO EDIT
 B lib/bs
 FLG -open Ocaml
-FLG -ppx /usr/local/lib/node_modules/bs-platform/lib/bsppx.exe
-S /Users/Gregory/Dropbox/code/fp/ocaml/node_modules/bs-platform/lib/ocaml
-B /Users/Gregory/Dropbox/code/fp/ocaml/node_modules/bs-platform/lib/ocaml
+FLG -ppx /Users/greg_murray/.config/yarn/global/node_modules/bs-platform/lib/bsppx.exe
+S /Users/greg_murray/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/ocaml
+B /Users/greg_murray/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/ocaml
 FLG -nostdlib -color always
 FLG -w -30-40+6+7+27+32..39+44+45+101
 S src
 B lib/bs/src
+S src/01
+B lib/bs/src/01
+S src/02
+B lib/bs/src/02
 ####BSB GENERATED: NO EDIT}

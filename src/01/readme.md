@@ -2,7 +2,7 @@
 
 ### strings
 
-^ = concat strings
+`^` concat strings
 
 ```ocaml
 "hello" ^ ", " ^ "world";;

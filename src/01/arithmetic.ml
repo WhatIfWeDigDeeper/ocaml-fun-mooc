@@ -8,7 +8,7 @@ let multiply_float x y = x *. y;;
 
 let divide x y = x / y;;
 
-let mod x y = x mod y;;
+let mod' x y = x mod y;;
 
 let negation = not;;
 
