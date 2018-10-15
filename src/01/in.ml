@@ -1,6 +1,6 @@
-let x = 4+5 in 2*x;;
+let x = 4+5;;
 
-let x1 = 10 and y = x+1 in x*y;;
+(*let x1 = 10 and y = x+1 in x*y;;*)
 
 (* multiple 3 times to achieve x^8 *)
 let x_power_8 =

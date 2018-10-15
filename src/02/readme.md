@@ -30,3 +30,24 @@ Identify a pattern
 
 ## Records
 
+## Arrays
+
+- single type
+- Heap allocated block.
+- not very convenient for pattern matching
+
+```ocaml
+let p = [|1;2;3|];;
+let size = 10;;
+let val = 4;;
+(* make array of size with initial value *)
+Array.make size val;;
+
+(* init array with fn *)
+let ary = Array.init size fn;;
+
+Array.length ary;;
+
+(* index into array *)
+ary.(0);;
+```

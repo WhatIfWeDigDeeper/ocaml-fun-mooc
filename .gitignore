@@ -2,3 +2,4 @@ node_modules
 lib
 src/**/*.bs.js
 src/*.bs.js
+.merlin
