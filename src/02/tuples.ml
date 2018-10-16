@@ -54,6 +54,7 @@ or (-1, -1) if there was no valid answer in the given range.
 *)
 
 type grand_age = int * int;;
+
 let rec find (answer: grand_age): grand_age =
   if is_valid_answer answer
   then answer

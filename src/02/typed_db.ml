@@ -1,4 +1,7 @@
 (*
+ocaml
+# #use "src/02/typed_db.ml"
+
 The code of the mini-database example is given in the prelude.
 
 1. You may have noticed that there is an error in the implementation
@@ -53,7 +56,7 @@ type database = {
 
 (* [make n] is the database with no contact and at most [n] contacts
     stored inside. *)
-let make max_number_of_contacts =
+let make (max_number_of_contacts): database =
   {
     number_of_contacts = 0;
     contacts = Array.make max_number_of_contacts nobody
@@ -69,7 +72,15 @@ type query = {
   contact : contact;
 }
 
-let search db contact =
+
+type db_result = bool * database * contact;;
+
+let insert_code = 0;;
+let delete_code = 1;;
+let search_code = 2;;
+
+
+let search (db) (contact): db_result =
   let rec aux idx =
     if idx >= db.number_of_contacts then
       (false, db, nobody)
@@ -80,14 +91,14 @@ let search db contact =
   in
   aux 0;;
 
-let insert db contact =
+let insert (db) (contact): db_result =
   if db.number_of_contacts >= Array.length db.contacts then
     (false, db, nobody)
   else
     let (status, db, _) = search db contact in
     if status then (false, db, contact) else
       let cells i =
-	if i = db.number_of_contacts then contact else db.contacts.(i)
+	      if i = db.number_of_contacts then contact else db.contacts.(i)
       in
       let db' = {
           number_of_contacts = db.number_of_contacts + 1;
@@ -96,7 +107,7 @@ let insert db contact =
       in
       (true, db', contact);;
 
-let delete db contact =
+let delete (db) (contact): db_result =
   let (status, db, contact) = search db contact in
   if not status then (false, db, contact)
   else
@@ -118,3 +129,29 @@ let engine db { code ; contact } =
   else if code = 1 then delete db contact
   else if code = 2 then search db contact
   else (false, db, nobody);;
+
+let insert_code = 0;;
+let delete_code = 1;;
+let search_code = 2;;
+
+let proof_of_bug  =
+  let db_proof = make 5 in
+  let firstContact = { name = "first"; phone_number = (0, 0, 0, 1) } in
+  let secondContact = { name = "second"; phone_number = (0, 0, 1, 0) } in
+  let _ = engine (db_proof) { code = insert_code; contact = firstContact } in
+  let _ = engine db_proof { code = insert_code; contact = secondContact } in
+  let _ = engine db_proof { code = delete_code; contact = firstContact } in
+  let status, _, _ = engine db_proof { code = search_code; contact = secondContact } in
+  let result = (status = false) in result;;
+
+let proof = [|
+  { code=0; contact={name="t1";phone_number=(0,0,1,0)}};
+  { code=0; contact={name="t2";phone_number=(0,0,0,1)}};
+  { code=1; contact={name="t1";phone_number=(0,0,1,0)}};
+  { code=2; contact={name="t2";phone_number=(0,0,0,1)}}
+  |];;
+
+(*
+let update (db) (contact): db_result =
+
+*)
