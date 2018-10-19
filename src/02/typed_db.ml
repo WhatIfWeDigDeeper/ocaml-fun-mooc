@@ -3,7 +3,6 @@
   # #use "src/02/typed_db.ml"
 
 The code of the mini-database example is given in the prelude.
-
 *)
 
 (* A phone number is a sequence of four integers. *)
@@ -42,13 +41,11 @@ type query = {
   contact : contact;
 }
 
-
 type db_result = bool * database * contact;;
 
 let insert_code = 0;;
 let delete_code = 1;;
 let search_code = 2;;
-
 
 let search (db) (contact): db_result =
   let rec aux idx =
@@ -142,7 +139,7 @@ let proof = [|
 // filter out contact and concatenante array
 *)
 
-let find_index (ary) (predicate: contact -> int): int =
+let find_index (ary) (predicate: contact -> bool): int =
   let rec aux idx =
     if idx >= Array.length ary -1 then
       -1
@@ -191,10 +188,6 @@ let update (db) (contact): db_result =
 let update (db) (contact): db_result =
   let _, post_del_db, _ = delete db contact in
   let insert_result = insert post_del_db contact in insert_result;;
-
-(*
-  
-*)
 
 (*
   4. Write an updated engine function that does an update 

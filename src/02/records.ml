@@ -31,13 +31,11 @@ type point  = { x : float; y : float; z : float };;
 type dpoint = { dx : float; dy : float; dz : float };;
 type physical_object = { position : point; velocity : dpoint };;
 
-
 let move (p: point) (dp: dpoint): point = {
   x = p.x +. dp.dx;
   y = p.y +. dp.dy;
   z = p.z +. dp.dz
 };;
-
 
 (*
 2. Write a function next : physical_object -> physical_object
@@ -61,7 +59,6 @@ let will_collide_soon (p1: physical_object) (p2: physical_object): bool =
                nxtp1.position.y = nxtp2.position.y ||
                nxtp1.position.z = nxtp2.position.z in result;;
 
-
 (* Time on Planet Shadokus 
    On planet Shadokus, 
    a year has 5 months, 
@@ -77,8 +74,6 @@ let will_collide_soon (p1: physical_object) (p2: physical_object): bool =
    its hour index is >= 0 and <= 2, and 
    its minute index is >= 0 and <= 1. 
 *)
-
-
 
 type date = {
   year: int;
@@ -139,4 +134,3 @@ Write a function
     if minutes = 0 then dt else next_date (minutes -1) (next dt)
 
   let of_int (minutes: int): date = next_date minutes the_origin_of_time
-

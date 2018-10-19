@@ -58,6 +58,14 @@ type data = None | Single of int | Pair of int * int;;
 
 ## 2. Recursive Types
 
+a list is either
+
+- an empty list
+- a head and the rest of the list
+- stored as linked list [SomeElementTag|value|pointerToNextItem->][someelemtag|value|emptylist]
+
+`i::r`
+
 ## 3. Tree-like values
 
 ## 4. cast study
@@ -65,3 +73,6 @@ type data = None | Single of int | Pair of int * int;;
 ## 5. Polymorphic algebraic datatypes
 
 ## 6. Advanced topics
+
+SNIPPETS FOR OCAML
+SNIPPETS FOR ALGORITHMS in cs

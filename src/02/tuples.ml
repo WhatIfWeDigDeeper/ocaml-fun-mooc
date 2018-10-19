@@ -1,11 +1,9 @@
-
 (* ---------------Tuples---------------*)
 
 let a = (3 * 6, 4 * 6);;
 
 (* destructuring *)
 let (x, _) = a;;
-
 
 (* Excercises *)
 
@@ -43,8 +41,6 @@ let is_valid_answer ((grand_father_age: int), (grand_son_age: int)): bool =
   let rev_gs = exchange grand_son_age in
   let result = (rev_gf * 3 = rev_gs) &&  (quad_gs = grand_father_age) in result;;
 
-
-
 (*
 Write a function find : (int * int) -> (int * int) 
 that takes a pair (max_grand_father_age, min_grand_son_age) and 
@@ -71,7 +67,6 @@ let rec find (answer: grand_age): grand_age =
       else
         ((-1),(-1)) in result;;
 
-
 let rec find (min_grand_son_age, max_grand_father_age): grand_age =
   if is_valid_answer (min_grand_son_age, max_grand_father_age)
   then (min_grand_son_age, max_grand_father_age)
@@ -86,5 +81,3 @@ let rec find (min_grand_son_age, max_grand_father_age): grand_age =
         find (grand_son_age, grand_father_age)
       else
         ((-1),(-1)) in result;;
-
-
