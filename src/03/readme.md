@@ -68,6 +68,40 @@ a list is either
 
 ## 3. Tree-like values
 
+```ocaml
+type database =
+    | NoContact
+    | DataNode of database * contact * database;;
+
+let search db name =
+    let rec traverse = function
+        | NoContact -> Error
+        | DataNode (left, contact, right) ->
+            if contact.name = name
+                then FoundContact contact
+            else if name < contact.name
+                then traverse left
+            else
+                traverse right
+        in
+        traverse db;;
+
+let insert db contact =
+    let rec traverse t = match t with
+        | NoContact -> DataNode (NoContact, contact, NoContact)
+        | DataNode (left, contact', right) ->
+            if contact.name = contact'.name
+                then t
+            else if contact.name < contact'.name
+                then DataNode (traverse left, contact', right)
+            else
+                DataNode (left, contact', traverse right)
+    in
+    NewDatabase (traverse db);;
+```
+
+- shares nodes on insertion, like immutable data
+
 ## 4. cast study
 
 ## 5. Polymorphic algebraic datatypes
