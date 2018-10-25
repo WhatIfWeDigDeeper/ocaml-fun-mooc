@@ -102,9 +102,40 @@ let insert db contact =
 
 - shares nodes on insertion, like immutable data
 
-## 4. cast study
+## 4. case study
+
+"The right type declarations helps implement the right program."
+
+type-directed
+
+```ocaml
+let rec all_characters_are states = function
+    | [] -> true
+    | character :: cs -> is_one_of character.state states && all_characters_are states cs
+;;
+
+(* can be replaced with higher order function *)
+let all_characters_are states = List.for_all (is_one_of states);;
+```
 
 ## 5. Polymorphic algebraic datatypes
+
+- List only contains **polymorphic functions**
+- maximizes code reuse
+
+```ocaml
+type 'a option =
+    | None
+    | Some of 'a;;
+
+let o1 = Some 42;;
+
+let o2 = None;;
+```
+
+type parameters are represented with `'a`
+
+to instantiate, _(some_type, ... some_type ) some_type_identifier_
 
 ## 6. Advanced topics
 
