@@ -139,5 +139,19 @@ to instantiate, _(some_type, ... some_type ) some_type_identifier_
 
 ## 6. Advanced topics
 
+```ocaml
+let remove_zero_or_one_head' = function
+    | 0 :: xs | 1 :: xs -> xs
+    | l -> l;;
+```
+
+### name a matched component
+
+"some_pattern **as** x"
+
+### guard
+
+keyword **when**
+
 SNIPPETS FOR OCAML
 SNIPPETS FOR ALGORITHMS in cs
