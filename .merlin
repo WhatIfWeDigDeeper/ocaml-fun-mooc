@@ -12,6 +12,8 @@ S src/01
 B lib/bs/src/01
 S src/02
 B lib/bs/src/02
+S src/04
+B lib/bs/src/04
 S src/03
 B lib/bs/src/03
 ####BSB GENERATED: NO EDIT}
