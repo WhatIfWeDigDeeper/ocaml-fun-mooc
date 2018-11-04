@@ -14,7 +14,11 @@ brew install ocaml
 brew install opam
 ```
 
-[VS Code Plugin OCaml and Reason IDE](https://marketplace.visualstudio.com/items?itemName=freebroccolo.reasonml)
+### VS Code Plugins
+
+[ReasonML](https://marketplace.visualstudio.com/items?itemName=jaredly.reason-vscode)
+
+[OCaml Debugger](https://marketplace.visualstudio.com/items?itemName=hackwaly.ocaml-debugger#overview)
 
 ### Resources
 
