@@ -3,3 +3,6 @@ lib
 src/**/*.bs.js
 src/*.bs.js
 .merlin
+*.out
+*.cmi
+*.cmo

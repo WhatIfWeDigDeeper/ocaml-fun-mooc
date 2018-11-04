@@ -8,12 +8,18 @@ FLG -nostdlib -color always
 FLG -w -30-40+6+7+27+32..39+44+45+101
 S src
 B lib/bs/src
+S src/sample_debug
+B lib/bs/src/sample_debug
 S src/01
 B lib/bs/src/01
 S src/02
 B lib/bs/src/02
-S src/04
-B lib/bs/src/04
+S src/04/1_func_expressions
+B lib/bs/src/04/1_func_expressions
+S src/04/3_fun_with_mult_args
+B lib/bs/src/04/3_fun_with_mult_args
+S src/04/2_func_as_first_class_value
+B lib/bs/src/04/2_func_as_first_class_value
 S src/03
 B lib/bs/src/03
 ####BSB GENERATED: NO EDIT}
