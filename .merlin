@@ -16,6 +16,8 @@ S src/02
 B lib/bs/src/02
 S src/04/1_func_expressions
 B lib/bs/src/04/1_func_expressions
+S src/04/4_partial_func_application
+B lib/bs/src/04/4_partial_func_application
 S src/04/3_fun_with_mult_args
 B lib/bs/src/04/3_fun_with_mult_args
 S src/04/2_func_as_first_class_value

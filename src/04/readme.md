@@ -24,6 +24,16 @@ function | pattern1 -> expression1 | patternN -> expressionN
 
 ## Partial Function Application
 
+```ocaml
+let f1 = fun x y -> expr
+```
+
+is the same as
+
+```ocaml
+let f2 = function x -> (function y -> expr)
+```
+
 ## Mapping Functions on Lists
 
 ## Folding Functions on Lists
