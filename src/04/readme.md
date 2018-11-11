@@ -36,4 +36,16 @@ let f2 = function x -> (function y -> expr)
 
 ## Mapping Functions on Lists
 
+```ocaml
+let rec mappy f l = function
+    | [] -> []
+    | head::rest -> (f head)::(mappy f rest)
+;;
+```
+
+turn operator into a function by writing it as `(+) a b`
+
+Multiplication is a special case as we have to disambiguate between the start of a comment, so need to surround with spaces `( * )`
+
+
 ## Folding Functions on Lists
