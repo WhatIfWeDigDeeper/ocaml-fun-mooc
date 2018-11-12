@@ -18,6 +18,8 @@ S src/04/5_mapping_funcs_on_lists
 B lib/bs/src/04/5_mapping_funcs_on_lists
 S src/04/1_func_expressions
 B lib/bs/src/04/1_func_expressions
+S src/04/6_fold_fns_on_lists
+B lib/bs/src/04/6_fold_fns_on_lists
 S src/04/4_partial_func_application
 B lib/bs/src/04/4_partial_func_application
 S src/04/3_fun_with_mult_args
