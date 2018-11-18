@@ -14,6 +14,8 @@ S src/01
 B lib/bs/src/01
 S src/02
 B lib/bs/src/02
+S src/05/1_exceptions
+B lib/bs/src/05/1_exceptions
 S src/04/5_mapping_funcs_on_lists
 B lib/bs/src/04/5_mapping_funcs_on_lists
 S src/04/1_func_expressions
