@@ -2,7 +2,7 @@ let x = 4+5;;
 
 (*let x1 = 10 and y = x+1 in x*y;;*)
 
-(* multiple 3 times to achieve x^8 *)
+(* multiply 3 times to achieve x^8 *)
 let x_power_8 =
             let x1 = x*x in
             let x2= x1*x1 in
