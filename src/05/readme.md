@@ -123,11 +123,48 @@ use the "update" `<-` operator
 a.(0) <- 100;;
 ```
 
-
 ## Mutable Record Fields
+
+Records are distinct tuples with named components
+
+```ocaml
+type point2D = { x : int; y : int };;
+let origin = { x = 0; y = 0 };;
+```
+
+can mark component as mutable
+
+```ocaml
+type Point2dMutable = { mutable x: int; mutable y: int};;
+```
 
 ## Variables, aka References
 
+```c
+int i =0;
+i = i + 1;
 ```
 
+Using records
+
+```ocaml
+type refcell = { mutable content: int };;
+
+let i = { content: 0 };;
+i.content <- i.content + 1;;
 ```
+
+Using ref type
+
+```ocaml
+let i = ref 0;;
+i := !i + 1;;
+```
+
+`type 'a ref = { mutable content: 'a }`
+
+Features
+
+- create function `ref: 'a -> 'a ref
+- read `!` contents
+- update `:=` contents
