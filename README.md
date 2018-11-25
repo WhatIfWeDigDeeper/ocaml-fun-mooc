@@ -12,6 +12,15 @@ Zinc Abstract Machine
 ```bash
 brew install ocaml
 brew install opam
+
+# npm fails so use yarn
+yarn global add bs-platform
+# or local
+yarn add --dev bs-platform
+
+yarn build
+yarn upgrade
+
 ```
 
 ### VS Code Plugins
@@ -30,7 +39,7 @@ Hello! This project allows you to quickly get started with Reason and BuckleScri
 
 # Build
 
-```
+```bash
 npm run build
 ```
 

@@ -1,9 +1,9 @@
 ####{BSB GENERATED: NO EDIT
 B lib/bs
 FLG -open Ocaml
-FLG -ppx /Users/Gregory/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/bsppx.exe
-S /Users/Gregory/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/ocaml
-B /Users/Gregory/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/ocaml
+FLG -ppx /Users/greg_murray/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/bsppx.exe
+S /Users/greg_murray/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/ocaml
+B /Users/greg_murray/Dropbox/code/fp/ocaml-fun-mooc/node_modules/bs-platform/lib/ocaml
 FLG -nostdlib -color always
 FLG -w -30-40+6+7+27+32..39+44+45+101
 S src
@@ -18,6 +18,10 @@ S src/05/1_exceptions
 B lib/bs/src/05/1_exceptions
 S src/05/2_input_output
 B lib/bs/src/05/2_input_output
+S src/05/3_sequences_and_iterations
+B lib/bs/src/05/3_sequences_and_iterations
+S src/05/4_mutable_arrays
+B lib/bs/src/05/4_mutable_arrays
 S src/04/5_mapping_funcs_on_lists
 B lib/bs/src/04/5_mapping_funcs_on_lists
 S src/04/1_func_expressions

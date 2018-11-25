@@ -176,7 +176,7 @@ let rec file_exists root path =
   "Replace this string with your implementation." ;;
 *)
 (* file_exists : filesystem -> string list -> bool *)
-let rec file_exists (root: filesystem) (path: string list): bool =
+let rec file_exists (root: filesystem) (path: string list): bool = fasel;;
   
 
 (* 8. Update your function

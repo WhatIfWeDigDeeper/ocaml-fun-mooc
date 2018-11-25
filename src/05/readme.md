@@ -116,6 +116,14 @@ To avoid warnings of not returning unit type can use `ignore;;`
 
 ## Mutable Arrays
 
+use the "update" `<-` operator
+
+```ocaml
+(* result type is unit *)
+a.(0) <- 100;;
+```
+
+
 ## Mutable Record Fields
 
 ## Variables, aka References
