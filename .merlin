@@ -10,6 +10,10 @@ S src
 B lib/bs/src
 S src/sample_debug
 B lib/bs/src/sample_debug
+S src/06/1_modules
+B lib/bs/src/06/1_modules
+S src/06/2_info_hiding
+B lib/bs/src/06/2_info_hiding
 S src/01
 B lib/bs/src/01
 S src/02
