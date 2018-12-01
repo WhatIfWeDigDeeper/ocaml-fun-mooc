@@ -35,9 +35,33 @@ end
 
 ## Information hiding
 
+Contracts or Interfaces
+
+- function preconditions
+- data invariants
+- hides implementation
+
+To constrain a module with a specific signature (interface)
+
+```ocaml
+module M : sig
+    (* body *)
+end = struct
+    (* standard module body *)
+end
+```
+
+A signature can be named:
+
+```ocaml
+module type S = sig (* ... *) end
+
+```
+
 ## Case study: a module for dictionaries
+
 
 ## Functors
 
-## Modules as compilation units
 
+## Modules as compilation units
