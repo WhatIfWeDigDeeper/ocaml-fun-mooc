@@ -1,7 +1,7 @@
 (* stackImplementation.ml
-https://www.fun-mooc.fr/asset-v1:parisdiderot+56002+session03+type@asset+block/stackImplementation.ml
+https://www.fun-mooc.fr/asset-v1:parisdiderot+56002+session03+type@asset+block/stackyImplementation.ml
 *)
-module Stack = struct
+module Stacky = struct
   type 'a t = 'a list
   let empty = []
   let push x s = x :: s
@@ -10,13 +10,13 @@ module Stack = struct
     | x :: xs -> Some (x, xs)
 end;;
 (* break *)
-let s = Stack.empty;;
-let s = Stack.push 1 s;;
+let s = Stacky.empty;;
+let s = Stacky.push 1 s;;
 let x, s =
-  match Stack.pop s with
+  match Stacky.pop s with
     | None -> assert false
     | Some (x, s) -> (x, s);;
-let r = Stack.pop s;;
+let r = Stacky.pop s;;
 
 (* tree.ml
 https://www.fun-mooc.fr/asset-v1:parisdiderot+56002+session03+type@asset+block/tree.ml

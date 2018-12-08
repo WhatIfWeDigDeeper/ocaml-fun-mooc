@@ -5,7 +5,7 @@
       "name": "OCaml",
       "type": "ocaml-debugger",
       "request": "launch",
-      "program": "${workspaceFolder}/src/sample_debug/a.out"
+      "program": "${workspaceFolder}/src/06/3_module_for_dictionaries/ex_remove_elems_from_dict.ml"
     }
   ]
 }

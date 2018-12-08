@@ -38,6 +38,18 @@ module Dict : DictSig = struct
         else if k < k' then lookup l k
         else lookup r k
 
-  let  rec remove d k =
+  let rec remove dict key =
+    match dict with
+    | Empty -> raise NotFound
+    | Node (left, key', val', right) ->
+      if key = key' then Empty
+      else if key < key' then Node (remove left key, key', val', right)
+      else Node (left, key', val', remove right key)
 
 end ;;
+
+let d = Dict.empty in
+let d = Dict.add d "Eggplant" 5 in
+let d = Dict.add d "Zucchini" 3 in
+let d = Dict.remove d "Eggplant" in
+d

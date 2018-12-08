@@ -30,7 +30,7 @@ module ForceArchive = struct
   let force_of_r2d2 = Dict.lookup force "r2d2"
 end;;
 (* break *)
-module Dict : DictSig = struct
+module Dict2 : DictSig = struct
   type ('key, 'value) t =
     | Empty
     | Node of ('key, 'value) t * 'key * 'value * ('key, 'value) t
@@ -59,7 +59,7 @@ module Dict : DictSig = struct
 end;;
 (* break *)
 (* The same client *)
-module ForceArchive = struct
+module ForceArchive2 = struct
   let force = Dict.empty
   let force = Dict.add force "luke" 10
   let force = Dict.add force "yoda" 100

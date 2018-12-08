@@ -31,12 +31,12 @@ module Dict1 = Dict (struct
 end)
 (* break *)
 module ForceArchive (Dict : DictSig) = struct
-  let force = Dict.empty
-  let force = Dict.add force "luke" 10
-  let force = Dict.add force "yoda" 100
-  let force = Dict.add force "darth" 1000
-  let force_of_luke = Dict.lookup force "luke"
-  let force_of_r2d2 = Dict.lookup force "r2d2"
+  let force = Dict1.empty
+  let force = Dict1.add force "luke" 10
+  let force = Dict1.add force "yoda" 100
+  let force = Dict1.add force "darth" 1000
+  let force_of_luke = Dict1.lookup force "luke"
+  let force_of_r2d2 = Dict1.lookup force "r2d2"
 end;;
 (* break *)
 module Dict (Key : sig

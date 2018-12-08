@@ -118,7 +118,7 @@ If there is an integer, this is the value you are looking for.
 If there is no integer, the key not in the trie.
 *)
 
-let rec search_trie (trie: trie) (c: char):  match trie with
+let rec search_trie (trie: trie) (c: char)  = match trie with
     | [] -> []
     | (x, children) -> 
 
@@ -129,7 +129,8 @@ let rec children_from_char (m: char_to_children) (c: char): trie option =
             if ch = c
                 then Some t
             else 
-                children_from_char xs c;;
+                children_from_char xs c
+
 
 
 let lookup (trie: trie) (w: string) = match w with

@@ -1,4 +1,4 @@
-module Tree = struct
+module Tree2 = struct
 
   type 'a t = Leaf of 'a | Node of 'a t * 'a * 'a t
 
@@ -69,10 +69,10 @@ let bfs t =
     | [] ->
         List.rev results
     | l :: ls ->
-        let results = (Tree.Iterator.focus l) :: results in
+        let results = (Tree2.Iterator.focus l) :: results in
         try
-          aux results (ls @ [ Tree.Iterator.go_first l; Tree.Iterator.go_second l])
-        with Tree.Iterator.Fail ->
+          aux results (ls @ [ Tree2.Iterator.go_first l; Tree2.Iterator.go_second l])
+        with Tree2.Iterator.Fail ->
           aux results ls
   in
-  aux [] [Tree.Iterator.Loc (t, Tree.Iterator.Top)]
+  aux [] [Tree2.Iterator.Loc (t, Tree2.Iterator.Top)]

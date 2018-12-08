@@ -1,7 +1,7 @@
 (* badSignature.ml
 https://www.fun-mooc.fr/asset-v1:parisdiderot+56002+session03+type@asset+block/badSignature.ml
 *)
-module Naturals : sig
+module NaturalsBad : sig
   (* Invariant: A value of type t is a positive integer. *)
   type t = int
   val zero : t
@@ -15,7 +15,7 @@ end = struct
   let pred = function 0 -> 0 | n -> n - 1
 end;;
 (* break *)
-open Naturals
+open NaturalsBad
 let rec add : t -> t -> t = fun x y ->
   if x = zero then y else succ (add (pred x) y);;
 let i_break_the_abstraction = pred (-1);;
