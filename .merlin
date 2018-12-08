@@ -10,6 +10,8 @@ S src
 B lib/bs/src
 S src/sample_debug
 B lib/bs/src/sample_debug
+S src/06/3_module_for_dictionaries
+B lib/bs/src/06/3_module_for_dictionaries
 S src/06/1_modules
 B lib/bs/src/06/1_modules
 S src/06/4_functors
